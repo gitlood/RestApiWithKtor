@@ -8,27 +8,27 @@ You will implement your very own backend server with the powerful Ktor framework
  - Android Basics (taught in Android Fundamentals)
  - MVVM (taught in MVVM News App)
  - Coroutines (taught in Kotlin Coroutines)
-What Will You Be Able to Do After Watching This Course?
-Build your very own REST API with Ktor, so you don't need Firebase anymore
-You will be able to have the full control over your backend, with Firebase you don't have that
-Respond to your own chosen HTTP endpoints with JSON, HTML and CSS
-Remotely save your data with MongoDB
-CRUD with MongoDB
-Implement an authentication mechanism, so only logged in users can make requests to your server
-A complete registration and login system
-Model a NoSQL database scheme
-Respond to all kinds of HTTP requests
-Use Retrofit on Android to communicate with your own Ktor server
-Efficiently handle network errors
-Implement an efficient local database cache that saves notes in a Room database for offline cache
-Inject dependencies with Dagger-Hilt
-Keep the user logged in
-Encrypt your SharedPreferences
-Showing Markdown formatted notes in Android
-Synchronize local notes with your Ktor server
-Securely save your user's passwords
-Encrypt your HTTP traffic
-Deploy your Ktor server on your own rented server to access it from everywhere
+ - What Will You Be Able to Do After Watching This Course?
+ - Build your very own REST API with Ktor, so you don't need Firebase anymore
+ - You will be able to have the full control over your backend, with Firebase you don't have that
+ - Respond to your own chosen HTTP endpoints with JSON, HTML and CSS
+ - Remotely save your data with MongoDB
+ - CRUD with MongoDB
+ - Implement an authentication mechanism, so only logged in users can make requests to your server
+ - A complete registration and login system
+ - Model a NoSQL database scheme
+ - Respond to all kinds of HTTP requests
+ - Use Retrofit on Android to communicate with your own Ktor server
+ - Efficiently handle network errors
+ - Implement an efficient local database cache that saves notes in a Room database for offline cache
+ - Inject dependencies with Dagger-Hilt
+ - Keep the user logged in
+ - Encrypt your SharedPreferences
+ - Showing Markdown formatted notes in Android
+ - Synchronize local notes with your Ktor server
+ - Securely save your user's passwords
+ - Encrypt your HTTP traffic
+ - Deploy your Ktor server on your own rented server to access it from everywhere
 
 # Course Duration: 9h
 # Visit : pl-coding.com
