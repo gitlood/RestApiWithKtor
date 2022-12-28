@@ -4,10 +4,10 @@
 You will implement your very own backend server with the powerful Ktor framework. After implementing the backend side, you will create a note app on Android to connect it to your server. Users will be able to register and login in your app to create notes and synchronize them on your server. All the notes will also be cached in a local database on the device for offline access. Users will be able to add owners to their notes, so that they can share their notes with other users who are then allowed to also read and edit these notes.
 
 # What Do You Have to Know Before Starting This Course?
-Kotlin Basics (taught in Kotlin Newbie to Pro)
-Android Basics (taught in Android Fundamentals)
-MVVM (taught in MVVM News App)
-Coroutines (taught in Kotlin Coroutines)
+ - Kotlin Basics (taught in Kotlin Newbie to Pro)
+ - Android Basics (taught in Android Fundamentals)
+ - MVVM (taught in MVVM News App)
+ - Coroutines (taught in Kotlin Coroutines)
 What Will You Be Able to Do After Watching This Course?
 Build your very own REST API with Ktor, so you don't need Firebase anymore
 You will be able to have the full control over your backend, with Firebase you don't have that
