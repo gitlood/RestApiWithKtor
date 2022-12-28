@@ -2,6 +2,7 @@ package com.example
 
 import com.example.data.checkPasswordForEmail
 import com.example.routes.loginRoute
+import com.example.routes.noteRoutes
 import com.example.routes.registerRoute
 import io.ktor.serialization.gson.*
 import io.ktor.server.application.*
@@ -21,10 +22,6 @@ fun main() {
 fun Application.module() {
     install(DefaultHeaders)
     install(CallLogging)
-    install(Routing) {
-        registerRoute()
-        loginRoute()
-    }
     install(ContentNegotiation) {
         gson {
             setPrettyPrinting()
@@ -32,6 +29,11 @@ fun Application.module() {
     }
     install(Authentication) {
         configureAuth()
+    }
+    install(Routing) {
+        registerRoute()
+        loginRoute()
+        noteRoutes()
     }
 }
 
