@@ -2,6 +2,7 @@ package com.example.data
 
 import com.example.data.collections.Note
 import com.example.data.collections.User
+import com.example.security.checkHashForPassword
 import org.litote.kmongo.contains
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.eq
@@ -23,7 +24,7 @@ suspend fun checkIfUserExists(email: String): Boolean {
 
 suspend fun checkPasswordForEmail(email: String, passwordToCheck: String): Boolean {
     val actualPassword = users.findOne(User::email eq email)?.password ?: return false
-    return actualPassword == passwordToCheck
+    return checkHashForPassword(passwordToCheck, actualPassword)
 }
 
 suspend fun getNotesForUser(email: String): List<Note> {
@@ -51,14 +52,14 @@ suspend fun addOwnerToNote(noteID: String, owner: String): Boolean {
 
 suspend fun deleteNoteForUser(email: String, noteID: String): Boolean {
     val note = notes.findOne(Note::id eq noteID, Note::owners contains email)
-    return note?.let { note ->
-        if (note.owners.size > 1) {
+    return note?.let { aNote ->
+        if (aNote.owners.size > 1) {
             //note had multiple owners, so just delete owners from owners list
-            val newOwners = note.owners - email
-            val updateResult = notes.updateOne(Note::id eq note.id, setValue(Note::owners, newOwners))
+            val newOwners = aNote.owners - email
+            val updateResult = notes.updateOne(Note::id eq aNote.id, setValue(Note::owners, newOwners))
             updateResult.wasAcknowledged()
         } else {
-            notes.deleteOneById(note.id).wasAcknowledged()
+            notes.deleteOneById(aNote.id).wasAcknowledged()
         }
     } ?: false
 }
